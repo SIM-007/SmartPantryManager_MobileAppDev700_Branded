@@ -1,0 +1,12 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/pantry_background" android:scaleType="centerCrop" android:alpha="0.30" android:contentDescription="Fresh ingredients background" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp">
+        <ImageView android:layout_width="match_parent" android:layout_height="105dp" android:src="@drawable/recipes_logo" android:scaleType="centerCrop" android:contentDescription="Recipes logo" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp" android:background="@drawable/screen_overlay">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Suggested Recipes" android:textSize="25sp" android:textStyle="bold" android:textColor="@color/green_dark" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Only recipes you can make with your current pantry are shown." android:paddingTop="4dp" />
+        </LinearLayout>
+        <TextView android:id="@+id/txtNoRecipes" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="No recipes match your pantry yet - add more ingredients." android:visibility="gone" android:padding="14dp" android:background="@drawable/screen_overlay" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerRecipes" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8dp" android:background="@drawable/screen_overlay" android:padding="6dp" />
+    </LinearLayout>
+</FrameLayout>

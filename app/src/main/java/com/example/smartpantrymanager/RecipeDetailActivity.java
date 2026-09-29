@@ -1,0 +1,3 @@
+package com.example.smartpantrymanager;
+import android.os.*;import android.widget.*;import androidx.appcompat.app.*;
+public class RecipeDetailActivity extends AppCompatActivity{protected void onCreate(Bundle b){super.onCreate(b);setContentView(R.layout.activity_recipe_detail);((TextView)findViewById(R.id.txtRecipeTitle)).setText(getIntent().getStringExtra("name"));String raw=getIntent().getStringExtra("ingredients"),out="Ingredients\n\n";if(raw!=null)for(String x:raw.split("\\|")){String[] z=x.split(":");if(z.length>2)out+="• "+z[0]+" - "+z[1]+" "+z[2]+"\n";}((TextView)findViewById(R.id.txtRecipeIngredients)).setText(out);((TextView)findViewById(R.id.txtRecipeSteps)).setText("Preparation\n\n"+getIntent().getStringExtra("steps"));}}

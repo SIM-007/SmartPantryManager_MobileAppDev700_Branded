@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:src="@drawable/pantry_background" android:scaleType="centerCrop" android:alpha="0.30" android:contentDescription="Fresh ingredients background" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:padding="16dp">
+        <ImageView android:layout_width="match_parent" android:layout_height="115dp" android:src="@drawable/recipes_logo"
+            android:scaleType="centerCrop" android:contentDescription="Smart Pantry Manager Recipes logo" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+            android:padding="14dp" android:background="@drawable/screen_overlay">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Smart Pantry Manager"
+                android:textSize="26sp" android:textStyle="bold" android:textColor="@color/green_dark" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Use what you already have. Reduce food waste."
+                android:textColor="@color/text_dark" android:paddingTop="4dp" android:paddingBottom="10dp" />
+            <Button android:id="@+id/btnAdd" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Add Ingredient"
+                android:textColor="@color/white" android:background="@drawable/button_background" android:layout_marginBottom="8dp" />
+            <Button android:id="@+id/btnSuggestions" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Suggested Recipes"
+                android:textColor="@color/white" android:background="@drawable/button_background" android:layout_marginBottom="8dp" />
+            <Button android:id="@+id/btnSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Settings"
+                android:textColor="@color/white" android:background="@drawable/button_background" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="My Pantry"
+            android:textSize="20sp" android:textStyle="bold" android:textColor="@color/green_dark" android:paddingTop="12dp" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerPantry" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:background="@drawable/screen_overlay" android:padding="6dp" />
+    </LinearLayout>
+</FrameLayout>

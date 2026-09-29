@@ -1,0 +1,2 @@
+package com.example.smartpantrymanager;
+public class Recipe { private int id; private String name,ingredients,steps; public Recipe(int id,String name,String ingredients,String steps){this.id=id;this.name=name;this.ingredients=ingredients;this.steps=steps;} public int getId(){return id;} public String getName(){return name;} public String getIngredients(){return ingredients;} public String getSteps(){return steps;} }
